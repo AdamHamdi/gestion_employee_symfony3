@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %} {% block title %}Ajouter article {% endblock %} {% block body %}
 <div class="col-sm-8 podt mx-auto mt-5">
     <div class="card">
-        <h1 class="card-header ">Ajouter un Post</h1>
+        <h1 class="card-header ">Modifier ce Post</h1>
         <div class="card-body ">
 
-            {{ form_start(form) }} {{ form_widget(form) }} <button class="btb btn-success" type='submit'>{{ button|default('Enregistrer') }}</button>{{ form_end(form) }}
+            {{ form_start(form) }} {{ form_widget(form) }}<button class="btb btn-success" type='submit'>{{ button|default('Valider') }}</button> {{ form_end(form) }}
         </div>
     </div>
 </div>
