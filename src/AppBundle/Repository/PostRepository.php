@@ -2,6 +2,9 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Post;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 /**
  * PostRepository
  *
@@ -10,4 +13,8 @@ namespace AppBundle\Repository;
  */
 class PostRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function __construct(EntityManager $em)
+    {
+        parent::__construct($em, $em->getClassMetadata(Post::class));
+    }
 }
