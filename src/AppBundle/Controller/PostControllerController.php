@@ -35,10 +35,7 @@ class PostControllerController extends Controller
 
         $post= new Post();
         $form = $this->createForm(PostType::class, $post);
-        // ->add('title', TextType::class)
-        // ->add('description', TextareaType::class)
-        // ->getForm();
-
+       
     $form->handleRequest($request);
         if ($request->isMethod('POST')) {
             
@@ -55,7 +52,7 @@ class PostControllerController extends Controller
             ]) ;
     }
     /**
-     * @Route("posts", name="liste.posts")
+     * @Route("/", name="liste.posts")
      */
     public function posts(){
         $posts=$this->getDoctrine()->getRepository("AppBundle\Entity\Post")->findAll();
