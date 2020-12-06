@@ -53,6 +53,7 @@ class User implements UserInterface, \Serializable
     private $email;
 
     private $plainPassword;
+    
     private $roles =[];
 
 
@@ -238,5 +239,7 @@ class User implements UserInterface, \Serializable
 
         return $this;
     }
+
+   
 }
 

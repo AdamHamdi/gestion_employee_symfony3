@@ -20,10 +20,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{path('liste.posts')}}">Acceuil <span class="sr-only">(current)</span></a>
       </li>
-     {% if is_granted('ROLE_USER') %}
+               {% if is_granted('ROLE_USER') %}
                             <li class="nav-item dropdown">
                                 <a style='color:white' id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {# {{ app.user.fullname }} #}
+                                    {{ app.user.fullname }}
                                     <span class="caret"></span>
                                 </a>
 

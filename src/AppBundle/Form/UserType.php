@@ -2,8 +2,6 @@
 
 namespace AppBundle\Form;
 
-
-use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -28,7 +26,7 @@ class UserType extends AbstractType
                     'first_options'=>['label'=>'Mot de passe*'],
                     'second_options'=>['label'=>'Confirmation*']
                      ])
-                     ->add('Valider',SubmitType::class);
+                     ;
     }/**
      * {@inheritdoc}
      */

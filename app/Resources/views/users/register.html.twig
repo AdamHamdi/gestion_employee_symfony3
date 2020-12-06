@@ -4,13 +4,13 @@
 {% endblock %}
 
 {% block body %}
-    <div class="col-sm-8 podt mt-5 mx-auto">
+    <div class="col-sm-6 podt mt-5 mx-auto">
         <div class="card">
             <h1 class="card-header ">Inscription</h1>
             <div class="card-body ">
                
-                {{ form(form) }}
-                 <button class="btn btn-primary " type="submit" name="login">  S'inscrire</button>
+                {{ form_start(form) }} {{ form_widget(form) }} <button class="btb btn-success" type='submit'>Enregistrer</button>{{ form_end(form) }}
+               
                 
             </div>
         </div>

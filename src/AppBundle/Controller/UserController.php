@@ -2,14 +2,12 @@
 
 namespace AppBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+
 use AppBundle\Entity\User;
 use AppBundle\Form\UserType;
-use Doctrine\ORM\EntityManagerInterface;
 
-use Symfony\Component\Form\FormFactoryInterface;
 
-use Symfony\Component\HttpFoundation\RedirectResponse;
+
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,7 +21,7 @@ class UserController extends Controller
  */
 public function register(UserPasswordEncoderInterface $passwordEncoder ,Request $request)
 {
-    $user =new User();
+    $user = new User();
     $form=$this->createForm(UserType::class,$user);
     $form->handleRequest($request);
 
@@ -38,9 +36,9 @@ public function register(UserPasswordEncoderInterface $passwordEncoder ,Request 
         $entityManager=$this->getDoctrine()->getManager();
         $entityManager->persist($user);
         $entityManager->flush();
-        $this->addFlash('success','compte créé avec succés !');
        
-        return $this->redirectToRoute('liste.posts');
+       
+        return $this->redirectToRoute('login');
     }
 
     return $this->render('users/register.html.twig', ['form'=>$form->createView()]);
