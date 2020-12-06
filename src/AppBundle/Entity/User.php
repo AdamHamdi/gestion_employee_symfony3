@@ -54,6 +54,9 @@ class User implements UserInterface, \Serializable
 
     private $plainPassword;
 
+/**
+ * @ORM\Column(type="simple_array")
+ */
     private $roles =[];
 
 
