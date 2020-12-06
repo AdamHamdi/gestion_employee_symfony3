@@ -3,9 +3,19 @@
 security:
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    access_decision_manager:
+        strategy: affirmative
+    encoders:
+      AppBundle\Entity\User:
+         algorithm: bcrypt
     providers:
-        in_memory:
-            memory: ~
+        users:
+           entity:
+               class: AppBundle\Entity\User
+               property: username
+        # in_memory:
+        #     memory: ~
+        #     http_basic: ~
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
