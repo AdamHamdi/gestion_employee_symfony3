@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block body %}
+    <div class="col-sm-8 podt mt-5 mx-auto">
+        <div class="card">
+            <h1 class="card-header ">Inscription</h1>
+            <div class="card-body ">
+               
+                {{ form(form) }}
+                 <button class="btn btn-primary " type="submit" name="login">  S'inscrire</button>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
