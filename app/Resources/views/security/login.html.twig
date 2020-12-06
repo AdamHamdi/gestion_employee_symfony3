@@ -6,7 +6,7 @@
             <form action="{{ path('login') }}" method="post">
                 <div class="form-group">
                     <label for="username">Pseudo*</label>
-                    <input type="text" class="form-control" required name='_username' value="{{ last_username }}"  >
+                    <input type="text" class="form-control" required name='_username'   >
                     {% if error %}
                     <div class="text-danger">{{ error.messageKey }}</div>
                     {% endif %}
